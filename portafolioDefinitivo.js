@@ -23,3 +23,5 @@ let options = {
   $(".php .bar").circleProgress({
     value: 0.45
   });
+
+

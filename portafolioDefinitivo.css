@@ -3,20 +3,10 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
   font-family: 'Poppins', sans-serif;
+ 
 }
 
 
-.iconos{
-    float: right;
-    position: relative;
-   text-align: center;
-   background-color: #171515;
-  height: 1px;
-  
-
-    
- 
-  }
   #banner{
 
   background-image: url(banner.gif);
@@ -27,6 +17,8 @@
 }
 
   
+
+
    #perfil{
    
     border-radius: 25%;
@@ -54,6 +46,7 @@
 
 .fondo{
   background-color: #171515;
+ 
 }
 .texto  {
   font-family: 'Poppins', sans-serif;
@@ -78,7 +71,7 @@
   
 }
 
-#right {
+.right {
   font-family: 'Poppins', sans-serif;
   display:block;
   float: right;
@@ -125,100 +118,192 @@
     
  }
 
+ /*Iconos*/
+ .sci-media{
+
+  display: flex;
+
+  justify-content:right;
+
+  align-items: right;
+
+  background: #070606;
+
+ 
+
+}
 
 
 
-  ul{
-    display: flex;
-  }
-  ul li{
-    position: relative;
-    display: block;
-    color: rgb(247, 243, 243);
-    font-size: 30px;
-    height: 60px;
-    width: 60px;
-    background: #171515;
-    line-height: 60px;
-    border-radius: 50%;
-    margin: 0 15px;
-    cursor: pointer;
-    transition: .5s;
-  }
-  ul li:before{
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    height: inherit;
-    width: inherit;
-    /* background: #d35400; */
-    border-radius: 50%;
-    transform: scale(.9);
-    z-index: -1;
-    transition: .5s;
-  }
-  ul li:nth-child(1):before{
-    background: #4267B2;
-  }
-  ul li:nth-child(2):before{
-    background: #1DA1F2;
-  }
-  ul li:nth-child(3):before{
-    background: #E1306C;
-  }
-  ul li:nth-child(4):before{
-    background: #2867B2;
-  }
-  ul li:nth-child(5):before{
-    background: #ff0000;
-  }
-  ul li:hover:before{
-    filter: blur(3px);
-    transform: scale(1.2);
-   
-  }
-  ul li:nth-child(1):hover:before{
-    box-shadow: 0 0 15px #4267B2;
-  }
-  ul li:nth-child(2):hover:before{
-    box-shadow: 0 0 15px #1DA1F2;
-  }
-  ul li:nth-child(3):hover:before{
-    box-shadow: 0 0 15px #E1306C;
-  }
-  ul li:nth-child(4):hover:before{
-    box-shadow: 0 0 15px #2867B2;
-  }
-  ul li:nth-child(5):hover:before{
-    box-shadow: 0 0 15px #ff0000;
-  }
-  ul li:nth-child(1):hover{
-    color: #456cba;
-    box-shadow: 0 0 15px #4267B2;
-    text-shadow: 0 0 15px #4267B2;
-  }
-  ul li:nth-child(2):hover{
-    color: #26a4f2;
-    box-shadow: 0 0 15px #1DA1F2;
-    text-shadow: 0 0 15px #1DA1F2;
-  }
-  ul li:nth-child(3):hover{
-    color: #e23670;
-    box-shadow: 0 0 15px #E1306C;
-    text-shadow: 0 0 15px #E1306C;
-  }
-  ul li:nth-child(4):hover{
-    color: #2a6cbb;
-    box-shadow: 0 0 15px #2867B2;
-    text-shadow: 0 0 15px #2867B2;
-  }
-  ul li:nth-child(5):hover{
-    color: #ff1a1a;
-    box-shadow: 0 0 15px #ff0000;
-    text-shadow: 0 0 15px #ff0000;
-  }
 
+.sci{
+
+  position: relative;
+
+  display: flex;
+
+}
+
+
+
+
+.sci li{
+
+  list-style: none;
+
+}
+
+
+
+
+.sci li::before{
+
+  position: absolute;
+
+  
+  transform: translate(-50%,calc(-50% + 120px));
+
+  font-size: 14vw;
+
+  pointer-events: none;
+
+  font-weight: 700;
+
+  transition: 0.5s;
+
+  opacity: 0;
+
+}
+
+
+
+
+.sci li:hover::before{
+
+  opacity: 0.1;
+
+  transform: translate(-50%,calc(-50% + 150px));
+
+}
+
+
+
+
+.sci li a{
+
+  position: relative;
+
+  display: inline-flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-decoration: none;
+
+  border-radius: 10px;
+
+  margin: 0 20px;
+
+  height: 70px;
+
+  width: 70px;
+
+  font-size: 3em;
+
+  background: #fafafa;
+
+  color: #333;
+
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.1),
+
+  5px 5px 30px rgba(0,0,0,0.05),
+
+  inset -2px -2px 5px rgba(0,0,0,0.1),
+
+  inset 2px 2px 5px rgba(0,0,0,0.05);
+
+  transition: 0.5s;
+
+}
+
+
+
+
+.sci li a:hover.facebook{
+
+  background: #1877f2;
+
+}
+
+
+
+
+.sci li a:hover.instagram{
+
+  background: #e4405f;
+
+}
+
+
+
+
+.sci li a:hover.whatsapp{
+
+  background: #25d366;
+
+}
+
+
+
+
+.sci li a:hover.twitter{
+
+  background: #0099ff;
+
+}
+
+
+
+
+.sci li a:hover.youtube{
+
+  background: #ff0000;
+
+}
+
+
+
+
+.sci li a:hover{
+
+  transform: scale(1.2);
+
+}
+
+
+
+
+.sci li a .bx{
+
+  transition: 0.25s;
+
+  pointer-events: none;
+
+}
+
+
+
+
+.sci li a:hover .bx{
+
+  color: #fff;
+
+  transform: scale(1.75);
+
+}
+
+  
 
   
  
@@ -236,6 +321,8 @@
  
 }
 
+
+/* progreso circular*/
   .wrapper{
     width: 900px;
     
@@ -307,25 +394,49 @@
     .wrapper {
       max-width: 700px;
       flex-wrap: wrap;
+      
+     
     }
     .wrapper .card {
+      position: relative;
+     
       width: calc(50% - 20px);
       margin-bottom: 20px;
-      flex-wrap: wrap;
+     
+     
     }
   }
   @media(max-width: 505px){
     .wrapper {
       max-width: 500px;
       flex-wrap: wrap;
+    
     }
     .wrapper .card {
       width: 100%;
-      flex-wrap: wrap;
-   
+    
     }
   }
  
+  @media(max-width: 605px){
+    .right {
+  float: left;
+  min-width: 100vh;
+  text-align: left;
+   top: -10px;
+ 
+     
+    
+    }
+  .PortafolioW{
+    
+    margin-left: 30%;
+  }
+  
+  }
+
+
+
 
   .contacto{
     position: relative;
@@ -458,7 +569,7 @@ form .form-row .textarea{
   z-index: 2;
 }
 @media (max-width: 700px) {
-  .container .text{
+  .container .text {
     font-size: 30px;
   }
   .container form{
